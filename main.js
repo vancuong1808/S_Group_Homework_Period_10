@@ -4,7 +4,7 @@ let logIn = document.querySelector('.button');
 let Isusername = false;
 let Ispassword = false;
 
-username.addEventListener('input', function() {
+Isusername = username.addEventListener('input', function() {
     // console.log("alo", username.value);
     // console.log( username.value[0] )
     if ( !username.checkValidity() ) {
@@ -14,9 +14,10 @@ username.addEventListener('input', function() {
         document.querySelector('.Invalid_username').style.display = 'none';
         Isusername = true;
     }
-    console.log( Isusername );
+    // console.log( Isusername );
+    return Isusername
 })
-password.addEventListener('input', function() {
+Ispassword = password.addEventListener('input', function() {
     // console.log("alo", username.value);
     if ( !password.checkValidity() ) {
     document.querySelector('.Invalid_password').style.display = 'block';
@@ -25,11 +26,12 @@ password.addEventListener('input', function() {
     document.querySelector('.Invalid_password').style.display = 'none';
     Ispassword = true;
     }
-    console.log( Ispassword );
+    // console.log( Ispassword );
+    return Ispassword
 })
 // console.log( Isusername );
 // console.log( Ispassword );
-logIn.addEventListener( 'onclick', function() {
+logIn.addEventListener( 'click', function() {
     if ( Isusername == true && Ispassword == true ) {
         alert("Success Login ");
     } else {
