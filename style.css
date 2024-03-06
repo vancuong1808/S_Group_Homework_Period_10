@@ -1,0 +1,113 @@
+body {
+    margin: 0px;
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    background-image: url( ./landscape_LoginForm.jpg );
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+.login_form {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    /* justify-content: space-around; */
+    width: 400px;
+    height: 500px;
+    background-color: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0 35px 5px rgba(0, 0, 0, 0.5);
+    filter: blur( 10% );
+    border-radius: 10px;
+    /* box-shadow: 0 0 10px #00f; */
+}
+h2 {
+    font-size: 50px;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 100;
+}
+.login {
+    display: flex;
+    flex-flow: column wrap ;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 50%;
+}
+.login_base {
+    display: flex;
+    flex-flow: column wrap ;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    padding: 0px 50px 0px 50px;
+    box-sizing: border-box;
+}
+#user_name {
+    height: 25px;
+    width: 200px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 0px;
+}
+.username label:hover {
+    cursor: pointer;
+}
+#pass_word {
+    height: 25px;
+    width: 200px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 0px;
+    margin: 3px;
+}
+.password label:hover {
+    cursor: pointer;
+}
+.button {
+    height: 40px;
+    width: 305px;
+    border-radius: 20px;
+    border: 0px;
+    background-color: #f89a95 ;
+    color: white;
+    font-size: 16px;
+    transition: 0.1s linear;
+}
+.button:hover {
+    height: 40px;
+    width: 305px;
+    border-radius: 20px;
+    border: 2px solid #f89a95;
+    background-color: white ;
+    color: #f89a95;
+    font-size: 16px;
+    cursor: pointer;
+}
+.ticket label:hover {
+    cursor: pointer;
+}
+.footer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.footer label:hover {
+    cursor: pointer;
+}
+.Invalid {
+    display: none;
+    width: 100%;
+    height: auto;
+    padding-left: 90px;
+}
+.username span {
+    color: #f89a95
+}
+.password span {
+    color: #f89a95
+}

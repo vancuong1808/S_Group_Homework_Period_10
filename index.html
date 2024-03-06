@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="login_form">
+            <div class="sign_in">
+                <h2>
+                    Login in
+                </h2>
+            </div>
+            <div class="login">
+                <div class="login_base">
+                <div class="username">
+                    <label for="user_name"> Username </label>
+                    <input id="user_name" type="text" placeholder="Username" pattern="^[a-zA-Z0-9]*" required>
+                    <span class="Invalid Invalid_username" > Invalid Username </span>
+                </div>
+                <div class="password">
+                    <label for="pass_word"> Password </label>
+                    <input id="pass_word" type="password" placeholder="Password"  pattern="^[a-zA-Z0-9!@#$%^&*-_=+.:;'>?]*.{8,}" required>
+                    <span class="Invalid Invalid_password" > Invalid Password </span>
+                </div>
+                <div class="ticket">
+                    <input type="checkbox" name="" id="REMEMBER">
+                    <label for="REMEMBER"> Remember </label>
+                </div>
+                    <button class="button" >
+                        Login
+                    </button>
+                <div class="footer">
+                    <label for=""> Forgot password </label>
+                    <label for="user_name"> Sign up </label>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="main.js"> </script>
+</html>
