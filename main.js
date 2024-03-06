@@ -19,6 +19,7 @@ Isusername = username.addEventListener('input', function() {
 })
 Ispassword = password.addEventListener('input', function() {
     // console.log("alo", username.value);
+    // let check = /^(?=.*[a-zA-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/;
     if ( !password.checkValidity() ) {
     document.querySelector('.Invalid_password').style.display = 'block';
     Ispassword = false;
@@ -34,7 +35,11 @@ Ispassword = password.addEventListener('input', function() {
 logIn.addEventListener( 'click', function() {
     if ( Isusername == true && Ispassword == true ) {
         alert("Success Login ");
+        document.querySelector('.Invalid_password').style.display = 'none';
+        document.querySelector('.Invalid_username').style.display = 'none';
     } else {
         alert("Fail Login");
+        document.querySelector('.Invalid_password').style.display = 'block';
+        document.querySelector('.Invalid_username').style.display = 'block';
     }
 })
