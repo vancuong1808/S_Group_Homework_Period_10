@@ -3,7 +3,8 @@ let password = document.getElementById("pass_word");
 let logIn = document.querySelector('.button');
 let Isusername = false;
 let Ispassword = false;
-
+// console.log( Isusername );
+// console.log( Ispassword );
 Isusername = username.addEventListener('input', function() {
     // console.log("alo", username.value);
     // console.log( username.value[0] )
@@ -30,16 +31,18 @@ Ispassword = password.addEventListener('input', function() {
     // console.log( Ispassword );
     return Ispassword
 })
-// console.log( Isusername );
-// console.log( Ispassword );
 logIn.addEventListener( 'click', function() {
-    if ( Isusername == true && Ispassword == true ) {
+    if ( Isusername == true && Ispassword == true && username.value != "" && password.value != ""  ) {
         alert("Success Login ");
         document.querySelector('.Invalid_password').style.display = 'none';
         document.querySelector('.Invalid_username').style.display = 'none';
     } else {
         alert("Fail Login");
-        document.querySelector('.Invalid_password').style.display = 'block';
-        document.querySelector('.Invalid_username').style.display = 'block';
+        if ( Isusername == false || username.value == "" ) {
+            document.querySelector('.Invalid_username').style.display = 'block';
+        } 
+        if ( Ispassword == false || password.value == "" ) {
+            document.querySelector('.Invalid_password').style.display = 'block';
+        } 
     }
 })
